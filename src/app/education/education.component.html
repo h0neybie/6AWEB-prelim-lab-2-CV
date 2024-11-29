@@ -1,0 +1,25 @@
+<div class="container mt-3 mb-3">
+    <div class="row">
+        
+             <p class="educ-head">Education</p><br><br>
+                        @for (item of education; track $index) {
+                            <div class="col-md-4">
+                                <div class="card p-3 mb-2 " style="padding: 40px!important;">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex flex-row align-items-center">
+                    
+                                        </div>
+                                        <div class="badge"> <span>{{ item.year }}</span> </div>
+                                    </div>
+
+                            <div class = "education-item">
+                              <h5>{{ item.level }}</h5> 
+                              <p style="margin: 0;"> {{ item.school }}</p>
+                              <p>{{ item.address }}</p>
+                             
+                            
+                            </div>
+                        </div>
+                    </div>
+                        }
+                    
