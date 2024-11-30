@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website with Opening Animation</title>
+  <style>
+    /* Base Styles */
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+    }
+
+    /* Animated Gradient Background */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgb(216, 180, 196) 0%, rgb(212, 194, 210) 21%, rgb(194, 202, 209) 100%);
+      background-size: 200% 200%;
+      animation: gradientMotion 19s linear infinite;
+      z-index: -1;
+    }
+
+    /* Opening Animation Container */
+    #opening {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.9); /* Semi-transparent overlay */
+      z-index: 10;
+      animation: fadeOut 2s ease-in-out 1s forwards;
+    }
+
+    /* Content (Hidden Initially) */
+    #content {
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out 2.5s forwards;
+    }
+
+    /* Welcome Message or Logo */
+    #opening h1 {
+      font-size: 3rem;
+      color: #646651;
+      animation: scaleUp 1s ease-in-out;
+    }
+
+    /* Keyframes for Animations */
+    @keyframes gradientMotion {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes scaleUp {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Opening Animation -->
+  <div id="opening">
+    <h1>Welcome to My Website</h1>
+  </div>
+
+  <!-- Main Content -->
+  <div id="content">
+    <h1>I am Abby Cruz Dizon</h1>
+    <p>Let's create something awesome together.</p>
+  </div>
+</body>
+</html>
