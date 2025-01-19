@@ -135,7 +135,7 @@
 
 /* HOVER */
 .card:hover {
-  background-color: rgba(145, 116, 116, 0.3); 
+  background-color: rgba(143, 91, 91, 0.3); 
   transform: translateY(-3px);
   color: #ffffff;
 }
