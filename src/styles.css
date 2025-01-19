@@ -8,7 +8,7 @@
     font-weight: 400;
     line-height: 26px;
     color: #222;
-    background: radial-gradient(circle, rgb(216, 180, 196) 0%, rgb(212, 194, 210) 21%, rgb(194, 202, 209) 100%);
+    background: radial-gradient(circle, rgb(224, 216, 181) 0%, rgb(214, 176, 188) 21%, rgb(173, 108, 146) 100%);
     background-size: 200% 200%;
       animation: gradientMotion 10s linear infinite;
     }
